@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "1075244984512",
+    "firebase_url": "https://la-radio-rd.firebaseio.com",
+    "project_id": "la-radio-rd",
+    "storage_bucket": "la-radio-rd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075244984512:android:8dc78d961e6c5181",
+        "android_client_info": {
+          "package_name": "com.rodriguez.giomar.laradio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075244984512-qkv1ok6mq8a040n7788muvjbilbr3l22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7leyprHCGuWk6xU78apYUJSEycIciOGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075244984512-qkv1ok6mq8a040n7788muvjbilbr3l22.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075244984512-tefbhhi7flci6bcjflvi04gjanajgmvu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rodriguez.giomar.La-Radio-RD"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075244984512:android:9593af7b15ae0393",
+        "android_client_info": {
+          "package_name": "giomar.rodriguez.com.laradio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075244984512-rgjogu25921f8h259iftb32uv819ktis.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "giomar.rodriguez.com.laradio",
+            "certificate_hash": "fc35f1908cb8d66d020411fe9709cb243caf72b7"
+          }
+        },
+        {
+          "client_id": "1075244984512-qkv1ok6mq8a040n7788muvjbilbr3l22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7leyprHCGuWk6xU78apYUJSEycIciOGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075244984512-qkv1ok6mq8a040n7788muvjbilbr3l22.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075244984512-tefbhhi7flci6bcjflvi04gjanajgmvu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rodriguez.giomar.La-Radio-RD"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
