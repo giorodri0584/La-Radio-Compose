@@ -1,5 +1,6 @@
 package com.rodriguez.giomar.laradio.audioService
 
+import android.app.PendingIntent
 import android.media.session.MediaSession
 import android.os.Bundle
 import android.support.v4.media.MediaBrowserCompat
@@ -12,7 +13,10 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancel
 import javax.inject.Inject
+
+private const val SERVICE_TAG = "MusicService"
 
 @AndroidEntryPoint
 class MusicService: MediaBrowserServiceCompat() {
@@ -27,6 +31,27 @@ class MusicService: MediaBrowserServiceCompat() {
 
     private lateinit var mediaSession: MediaSessionCompat
     private lateinit var mediaSessionConnector: MediaSessionConnector
+
+    override fun onCreate() {
+        super.onCreate()
+        val activityIntent = packageManager?.getLaunchIntentForPackage(packageName)?.let {
+            PendingIntent.getActivity(this, 0, it, 0)
+        }
+        mediaSession = MediaSessionCompat(this, SERVICE_TAG).apply {
+            setSessionActivity(activityIntent)
+            isActive = true
+        }
+
+        sessionToken = mediaSession.sessionToken
+
+        mediaSessionConnector = MediaSessionConnector(mediaSession)
+        mediaSessionConnector.setPlayer(exoPlayer)
+    }
+
+    override fun onDestroy() {
+        serviceScope.cancel()
+        super.onDestroy()
+    }
 
     override fun onGetRoot(
         clientPackageName: String,
