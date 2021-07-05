@@ -11,4 +11,8 @@ object StationApiService {
         val result: Result = MyKtorClient.client.get("${MyKtorClient.BASE_URL}/Stations")
         return StationState.HasData(result.results)
     }
+    suspend fun fetchAllStations(): List<Station> {
+        val result: Result = MyKtorClient.client.get("${MyKtorClient.BASE_URL}/Stations")
+        return result.results
+    }
 }
